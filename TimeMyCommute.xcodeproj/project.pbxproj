@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5452CF50202B6AB2007882FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF4F202B6AB2007882FF /* AppDelegate.swift */; };
+		5452CF55202B6AB2007882FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5452CF53202B6AB2007882FF /* Main.storyboard */; };
+		5452CF58202B6AB2007882FF /* TimeMyCommute.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF56202B6AB2007882FF /* TimeMyCommute.xcdatamodeld */; };
+		5452CF5A202B6AB2007882FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5452CF59202B6AB2007882FF /* Assets.xcassets */; };
+		5452CF5D202B6AB2007882FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5452CF5B202B6AB2007882FF /* LaunchScreen.storyboard */; };
+		5452CF65202B8DF4007882FF /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF64202B8DF4007882FF /* CoreDataHelper.swift */; };
+		5452CF67202B9F28007882FF /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF66202B9F28007882FF /* TimerViewController.swift */; };
+		5452CF6A202BB022007882FF /* TimerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF68202BB022007882FF /* TimerTableViewCell.swift */; };
+		5452CF6B202BB022007882FF /* TimerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5452CF69202BB022007882FF /* TimerTableViewCell.xib */; };
+		5452CF6D202CAD27007882FF /* CreateActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF6C202CAD27007882FF /* CreateActivityViewController.swift */; };
+		5452CF6F202CB333007882FF /* ComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF6E202CB333007882FF /* ComponentTableViewCell.swift */; };
+		5452CF772030CB45007882FF /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF762030CB45007882FF /* ActivitiesViewController.swift */; };
+		5452CF792030D058007882FF /* Activity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF782030D058007882FF /* Activity+Extension.swift */; };
+		5452CF7C2030D19F007882FF /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF7B2030D19F007882FF /* ActivityDetailViewController.swift */; };
+		5452CF7E2030D2B5007882FF /* Component+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF7D2030D2B5007882FF /* Component+Extension.swift */; };
+		5452CF8020313CC3007882FF /* Duration+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF7F20313CC3007882FF /* Duration+Extension.swift */; };
+		5452CF8220314752007882FF /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF8120314752007882FF /* DateHelper.swift */; };
+		54915205203E051F009C7138 /* CompressedComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54915204203E051F009C7138 /* CompressedComponentView.swift */; };
+		54915207203E0551009C7138 /* InputComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54915206203E0551009C7138 /* InputComponentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5452CF4C202B6AB2007882FF /* TimeMyCommute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMyCommute.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5452CF4F202B6AB2007882FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5452CF54202B6AB2007882FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5452CF57202B6AB2007882FF /* TimeMyCommute.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeMyCommute.xcdatamodel; sourceTree = "<group>"; };
+		5452CF59202B6AB2007882FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5452CF5C202B6AB2007882FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5452CF5E202B6AB2007882FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5452CF64202B8DF4007882FF /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		5452CF66202B9F28007882FF /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		5452CF68202BB022007882FF /* TimerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTableViewCell.swift; sourceTree = "<group>"; };
+		5452CF69202BB022007882FF /* TimerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerTableViewCell.xib; sourceTree = "<group>"; };
+		5452CF6C202CAD27007882FF /* CreateActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityViewController.swift; sourceTree = "<group>"; };
+		5452CF6E202CB333007882FF /* ComponentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentTableViewCell.swift; sourceTree = "<group>"; };
+		5452CF762030CB45007882FF /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		5452CF782030D058007882FF /* Activity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+Extension.swift"; sourceTree = "<group>"; };
+		5452CF7B2030D19F007882FF /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivityDetailViewController.swift; path = "TimeMyCommute/View Controllers/ActivityDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
+		5452CF7D2030D2B5007882FF /* Component+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Component+Extension.swift"; sourceTree = "<group>"; };
+		5452CF7F20313CC3007882FF /* Duration+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Duration+Extension.swift"; sourceTree = "<group>"; };
+		5452CF8120314752007882FF /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		54915204203E051F009C7138 /* CompressedComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressedComponentView.swift; sourceTree = "<group>"; };
+		54915206203E0551009C7138 /* InputComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputComponentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5452CF49202B6AB2007882FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5452CF43202B6AB2007882FF = {
+			isa = PBXGroup;
+			children = (
+				5452CF4E202B6AB2007882FF /* TimeMyCommute */,
+				5452CF4D202B6AB2007882FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5452CF4D202B6AB2007882FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5452CF4C202B6AB2007882FF /* TimeMyCommute.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5452CF4E202B6AB2007882FF /* TimeMyCommute */ = {
+			isa = PBXGroup;
+			children = (
+				5452CF56202B6AB2007882FF /* TimeMyCommute.xcdatamodeld */,
+				5452CF7A2030D05F007882FF /* Models */,
+				5452CF74202CB7A9007882FF /* Services */,
+				5452CF70202CB33A007882FF /* Views */,
+				5452CF73202CB48B007882FF /* View Controllers */,
+				5452CF75202CB7C3007882FF /* Supporting Files */,
+				5452CF5E202B6AB2007882FF /* Info.plist */,
+			);
+			path = TimeMyCommute;
+			sourceTree = "<group>";
+		};
+		5452CF70202CB33A007882FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5452CF6E202CB333007882FF /* ComponentTableViewCell.swift */,
+				5452CF68202BB022007882FF /* TimerTableViewCell.swift */,
+				54915206203E0551009C7138 /* InputComponentView.swift */,
+				54915204203E051F009C7138 /* CompressedComponentView.swift */,
+				5452CF69202BB022007882FF /* TimerTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5452CF73202CB48B007882FF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5452CF7B2030D19F007882FF /* ActivityDetailViewController.swift */,
+				5452CF6C202CAD27007882FF /* CreateActivityViewController.swift */,
+				5452CF66202B9F28007882FF /* TimerViewController.swift */,
+				5452CF762030CB45007882FF /* ActivitiesViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5452CF74202CB7A9007882FF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5452CF64202B8DF4007882FF /* CoreDataHelper.swift */,
+				5452CF8120314752007882FF /* DateHelper.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5452CF75202CB7C3007882FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5452CF4F202B6AB2007882FF /* AppDelegate.swift */,
+				5452CF53202B6AB2007882FF /* Main.storyboard */,
+				5452CF59202B6AB2007882FF /* Assets.xcassets */,
+				5452CF5B202B6AB2007882FF /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5452CF7A2030D05F007882FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5452CF782030D058007882FF /* Activity+Extension.swift */,
+				5452CF7D2030D2B5007882FF /* Component+Extension.swift */,
+				5452CF7F20313CC3007882FF /* Duration+Extension.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5452CF4B202B6AB2007882FF /* TimeMyCommute */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5452CF61202B6AB2007882FF /* Build configuration list for PBXNativeTarget "TimeMyCommute" */;
+			buildPhases = (
+				5452CF48202B6AB2007882FF /* Sources */,
+				5452CF49202B6AB2007882FF /* Frameworks */,
+				5452CF4A202B6AB2007882FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeMyCommute;
+			productName = TimeMyCommute;
+			productReference = 5452CF4C202B6AB2007882FF /* TimeMyCommute.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5452CF44202B6AB2007882FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "C4Q ";
+				TargetAttributes = {
+					5452CF4B202B6AB2007882FF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5452CF47202B6AB2007882FF /* Build configuration list for PBXProject "TimeMyCommute" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5452CF43202B6AB2007882FF;
+			productRefGroup = 5452CF4D202B6AB2007882FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5452CF4B202B6AB2007882FF /* TimeMyCommute */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5452CF4A202B6AB2007882FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5452CF5D202B6AB2007882FF /* LaunchScreen.storyboard in Resources */,
+				5452CF5A202B6AB2007882FF /* Assets.xcassets in Resources */,
+				5452CF55202B6AB2007882FF /* Main.storyboard in Resources */,
+				5452CF6B202BB022007882FF /* TimerTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5452CF48202B6AB2007882FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5452CF7C2030D19F007882FF /* ActivityDetailViewController.swift in Sources */,
+				5452CF8020313CC3007882FF /* Duration+Extension.swift in Sources */,
+				5452CF67202B9F28007882FF /* TimerViewController.swift in Sources */,
+				5452CF7E2030D2B5007882FF /* Component+Extension.swift in Sources */,
+				5452CF6D202CAD27007882FF /* CreateActivityViewController.swift in Sources */,
+				5452CF50202B6AB2007882FF /* AppDelegate.swift in Sources */,
+				5452CF6A202BB022007882FF /* TimerTableViewCell.swift in Sources */,
+				5452CF65202B8DF4007882FF /* CoreDataHelper.swift in Sources */,
+				5452CF8220314752007882FF /* DateHelper.swift in Sources */,
+				5452CF772030CB45007882FF /* ActivitiesViewController.swift in Sources */,
+				54915205203E051F009C7138 /* CompressedComponentView.swift in Sources */,
+				5452CF58202B6AB2007882FF /* TimeMyCommute.xcdatamodeld in Sources */,
+				5452CF792030D058007882FF /* Activity+Extension.swift in Sources */,
+				5452CF6F202CB333007882FF /* ComponentTableViewCell.swift in Sources */,
+				54915207203E0551009C7138 /* InputComponentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5452CF53202B6AB2007882FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5452CF54202B6AB2007882FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5452CF5B202B6AB2007882FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5452CF5C202B6AB2007882FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5452CF5F202B6AB2007882FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5452CF60202B6AB2007882FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5452CF62202B6AB2007882FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76LC8AC986;
+				INFOPLIST_FILE = TimeMyCommute/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = c4q.TimeMyCommute;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5452CF63202B6AB2007882FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76LC8AC986;
+				INFOPLIST_FILE = TimeMyCommute/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = c4q.TimeMyCommute;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5452CF47202B6AB2007882FF /* Build configuration list for PBXProject "TimeMyCommute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5452CF5F202B6AB2007882FF /* Debug */,
+				5452CF60202B6AB2007882FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5452CF61202B6AB2007882FF /* Build configuration list for PBXNativeTarget "TimeMyCommute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5452CF62202B6AB2007882FF /* Debug */,
+				5452CF63202B6AB2007882FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5452CF56202B6AB2007882FF /* TimeMyCommute.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5452CF57202B6AB2007882FF /* TimeMyCommute.xcdatamodel */,
+			);
+			currentVersion = 5452CF57202B6AB2007882FF /* TimeMyCommute.xcdatamodel */;
+			path = TimeMyCommute.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5452CF44202B6AB2007882FF /* Project object */;
+}

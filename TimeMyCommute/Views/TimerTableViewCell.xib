@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="115" id="KGk-i7-Jjw" customClass="TimerTableViewCell" customModule="TimeMyCommute" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="438" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="438" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CKq-bC-Qy3">
+                        <rect key="frame" x="0.0" y="20" width="438" height="74.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Componenet Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rK-2p-4kA">
+                                <rect key="frame" x="0.0" y="0.0" width="438" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbO-yR-SoB">
+                                <rect key="frame" x="20" y="44.5" width="398" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="0:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lq-8N-Hag">
+                                        <rect key="frame" x="0.0" y="0.0" width="322" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soG-9z-Qch">
+                                        <rect key="frame" x="322" y="0.0" width="76" height="30"/>
+                                        <state key="normal" title="Completed"/>
+                                        <connections>
+                                            <action selector="completedButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lPw-iD-LCj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="lbO-yR-SoB" firstAttribute="leading" secondItem="CKq-bC-Qy3" secondAttribute="leading" constant="20" symbolic="YES" id="4gK-mn-vt6"/>
+                            <constraint firstItem="1rK-2p-4kA" firstAttribute="leading" secondItem="CKq-bC-Qy3" secondAttribute="leading" id="99I-B3-YHg"/>
+                            <constraint firstAttribute="trailing" secondItem="1rK-2p-4kA" secondAttribute="trailing" id="C2s-uM-UTd"/>
+                            <constraint firstAttribute="trailing" secondItem="lbO-yR-SoB" secondAttribute="trailing" constant="20" symbolic="YES" id="U8k-Dd-4lK"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CKq-bC-Qy3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1ia-vg-rRN"/>
+                    <constraint firstAttribute="trailing" secondItem="CKq-bC-Qy3" secondAttribute="trailing" id="4Qq-0k-vue"/>
+                    <constraint firstAttribute="bottom" secondItem="CKq-bC-Qy3" secondAttribute="bottom" constant="20" symbolic="YES" id="qO0-37-0A0"/>
+                    <constraint firstItem="CKq-bC-Qy3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="uCl-U4-NWp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="completedButton" destination="soG-9z-Qch" id="8Tn-2P-xvK"/>
+                <outlet property="componentNameLabel" destination="1rK-2p-4kA" id="QOm-BD-CXV"/>
+                <outlet property="timerLabel" destination="1lq-8N-Hag" id="Lms-X7-WwV"/>
+            </connections>
+            <point key="canvasLocation" x="182" y="80.5"/>
+        </tableViewCell>
+    </objects>
+</document>

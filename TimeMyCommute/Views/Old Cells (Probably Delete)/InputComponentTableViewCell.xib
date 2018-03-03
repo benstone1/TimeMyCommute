@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputCell" rowHeight="252" id="Axy-jp-kYd" customClass="InputComponentTableViewCell" customModule="TimeMyCommute" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="252"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Axy-jp-kYd" id="v8t-a0-sDS">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="251.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Component Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8He-dy-ROl">
+                        <rect key="frame" x="20" y="20" width="335" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCJ-dZ-ZtT">
+                        <rect key="frame" x="128" y="96.5" width="119" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Oh3-rQ-Bpw">
+                        <rect key="frame" x="18" y="125.5" width="339" height="31"/>
+                        <connections>
+                            <action selector="sliderValueChanged:" destination="Axy-jp-kYd" eventType="valueChanged" id="haM-6s-67c"/>
+                        </connections>
+                    </slider>
+                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="755" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2yI-bD-VQO">
+                        <rect key="frame" x="104" y="163.5" width="167.5" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="254" verticalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAl-to-Uet">
+                        <rect key="frame" x="20" y="201.5" width="335" height="30"/>
+                        <state key="normal" title="Add New Component"/>
+                        <connections>
+                            <action selector="addNewButtonPressed:" destination="Axy-jp-kYd" eventType="touchUpInside" id="kkf-jg-pdg"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dSM-Io-3SD">
+                        <rect key="frame" x="20" y="49" width="335" height="39.5"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8He-dy-ROl" firstAttribute="top" secondItem="v8t-a0-sDS" secondAttribute="top" constant="20" symbolic="YES" id="38i-bk-djV"/>
+                    <constraint firstAttribute="bottom" secondItem="YAl-to-Uet" secondAttribute="bottom" constant="20" symbolic="YES" id="7uE-5i-BZq"/>
+                    <constraint firstItem="TCJ-dZ-ZtT" firstAttribute="centerX" secondItem="v8t-a0-sDS" secondAttribute="centerX" id="Ccb-1L-sdT"/>
+                    <constraint firstItem="2yI-bD-VQO" firstAttribute="top" secondItem="Oh3-rQ-Bpw" secondAttribute="bottom" constant="8" symbolic="YES" id="CwC-4d-HZo"/>
+                    <constraint firstItem="TCJ-dZ-ZtT" firstAttribute="top" secondItem="dSM-Io-3SD" secondAttribute="bottom" constant="8" symbolic="YES" id="Cwd-qD-qqZ"/>
+                    <constraint firstItem="YAl-to-Uet" firstAttribute="top" secondItem="2yI-bD-VQO" secondAttribute="bottom" constant="8" symbolic="YES" id="IXn-r2-KGI"/>
+                    <constraint firstItem="dSM-Io-3SD" firstAttribute="top" secondItem="8He-dy-ROl" secondAttribute="bottom" constant="8" symbolic="YES" id="M58-vt-7YF"/>
+                    <constraint firstAttribute="trailing" secondItem="Oh3-rQ-Bpw" secondAttribute="trailing" constant="20" symbolic="YES" id="OUD-jM-eVh"/>
+                    <constraint firstItem="Oh3-rQ-Bpw" firstAttribute="top" secondItem="TCJ-dZ-ZtT" secondAttribute="bottom" constant="8" symbolic="YES" id="Re9-fO-7Q1"/>
+                    <constraint firstAttribute="trailing" secondItem="dSM-Io-3SD" secondAttribute="trailing" constant="20" symbolic="YES" id="TMv-Hb-kVq"/>
+                    <constraint firstItem="YAl-to-Uet" firstAttribute="leading" secondItem="v8t-a0-sDS" secondAttribute="leading" constant="20" symbolic="YES" id="ard-vm-WI0"/>
+                    <constraint firstItem="2yI-bD-VQO" firstAttribute="centerX" secondItem="v8t-a0-sDS" secondAttribute="centerX" id="fMK-74-JFg"/>
+                    <constraint firstItem="dSM-Io-3SD" firstAttribute="leading" secondItem="v8t-a0-sDS" secondAttribute="leading" constant="20" symbolic="YES" id="frS-Qm-Gfh"/>
+                    <constraint firstAttribute="trailing" secondItem="8He-dy-ROl" secondAttribute="trailing" constant="20" symbolic="YES" id="iuE-Po-MK4"/>
+                    <constraint firstItem="2yI-bD-VQO" firstAttribute="width" secondItem="dSM-Io-3SD" secondAttribute="width" multiplier="1:2" id="jXF-mD-SMZ"/>
+                    <constraint firstAttribute="trailing" secondItem="YAl-to-Uet" secondAttribute="trailing" constant="20" symbolic="YES" id="tN4-HN-7UK"/>
+                    <constraint firstItem="8He-dy-ROl" firstAttribute="leading" secondItem="v8t-a0-sDS" secondAttribute="leading" constant="20" symbolic="YES" id="uRc-Cr-l0e"/>
+                    <constraint firstItem="Oh3-rQ-Bpw" firstAttribute="leading" secondItem="v8t-a0-sDS" secondAttribute="leading" constant="20" symbolic="YES" id="vPV-Li-gTb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addNewComponentButton" destination="YAl-to-Uet" id="ro9-Tw-Kxa"/>
+                <outlet property="componentNameTextField" destination="dSM-Io-3SD" id="U0y-vW-flz"/>
+                <outlet property="timeSlider" destination="Oh3-rQ-Bpw" id="lVt-g7-uws"/>
+                <outlet property="timeTextField" destination="2yI-bD-VQO" id="9AS-G9-mm2"/>
+            </connections>
+            <point key="canvasLocation" x="23.5" y="107"/>
+        </tableViewCell>
+    </objects>
+</document>
