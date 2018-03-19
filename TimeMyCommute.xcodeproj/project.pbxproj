@@ -69,6 +69,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5436D58720600327009FDAA6 /* Create Activity */ = {
+			isa = PBXGroup;
+			children = (
+				5452CF6E202CB333007882FF /* ComponentTableViewCell.swift */,
+				54915206203E0551009C7138 /* InputComponentView.swift */,
+				54915204203E051F009C7138 /* CompressedComponentView.swift */,
+			);
+			path = "Create Activity";
+			sourceTree = "<group>";
+		};
+		5436D5882060033A009FDAA6 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				5452CF69202BB022007882FF /* TimerTableViewCell.xib */,
+				5452CF68202BB022007882FF /* TimerTableViewCell.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		5436D58920600349009FDAA6 /* Activites View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5436D58120597D4A009FDAA6 /* ActivitiesTBComponentTableViewCell.swift */,
+				5436D58220597D4A009FDAA6 /* ActivitiesTBComponentTableViewCell.xib */,
+				5436D58520598418009FDAA6 /* ActivityTableViewHeaderView.swift */,
+			);
+			path = "Activites View Controller";
+			sourceTree = "<group>";
+		};
 		5452CF43202B6AB2007882FF = {
 			isa = PBXGroup;
 			children = (
@@ -102,14 +131,9 @@
 		5452CF70202CB33A007882FF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5452CF6E202CB333007882FF /* ComponentTableViewCell.swift */,
-				5452CF69202BB022007882FF /* TimerTableViewCell.xib */,
-				5452CF68202BB022007882FF /* TimerTableViewCell.swift */,
-				54915206203E0551009C7138 /* InputComponentView.swift */,
-				54915204203E051F009C7138 /* CompressedComponentView.swift */,
-				5436D58120597D4A009FDAA6 /* ActivitiesTBComponentTableViewCell.swift */,
-				5436D58220597D4A009FDAA6 /* ActivitiesTBComponentTableViewCell.xib */,
-				5436D58520598418009FDAA6 /* ActivityTableViewHeaderView.swift */,
+				5436D58720600327009FDAA6 /* Create Activity */,
+				5436D5882060033A009FDAA6 /* Timer */,
+				5436D58920600349009FDAA6 /* Activites View Controller */,
 			);
 			path = Views;
 			sourceTree = "<group>";

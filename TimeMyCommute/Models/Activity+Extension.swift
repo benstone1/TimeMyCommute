@@ -12,13 +12,17 @@ extension Activity {
     var sortedComponents: [Component] {
         return (self.components?.allObjects as! [Component]).sorted{$0.index < $1.index}
     }
-    var averageRecordedTime: TimeInterval? {
+    var averageRecordedTimeInSeconds: TimeInterval? {
         var finalTime: Double = 0
         for component in sortedComponents {
-            guard let avgTime = component.averageRecordedDuration else { return nil }
+            guard let avgTime = component.averageRecordedDurationInSeconds else { return nil }
             finalTime += avgTime
         }
         return finalTime
+    }
+    var averageRecordedTimeInMinutes: Int? {
+        guard let avTime = averageRecordedTimeInSeconds else {return nil }
+        return Int(avTime) / 60
     }
     func toCellFormattedString() -> String {
         var str = "\(self.name ?? "No name")\n"
@@ -27,7 +31,7 @@ extension Activity {
             """
             \(component.name ?? "no name")
                 Estimated time: \(component.estimatedTimeInMinutes)
-                Actual time: \(component.averageRecordedDuration?.description ?? "No data yet!")
+                Actual time: \(component.averageRecordedDurationInSeconds?.description ?? "No data yet!")
             """
         }
         return str

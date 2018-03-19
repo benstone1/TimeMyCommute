@@ -28,7 +28,7 @@ class ActivityDetailViewController: UIViewController {
     }
     func setupLabels() {
         estimatedTimeLabel.text = "Est. time: \(activity.estimatedTimeInMinutes)"
-        averageTimeLabel.text = "Avg. time: \(activity.averageRecordedTime?.description ?? "no data yet")"
+        averageTimeLabel.text = "Avg. time: \(activity.averageRecordedTimeInSeconds?.description ?? "no data yet")"
     }
 }
 
@@ -40,7 +40,7 @@ extension ActivityDetailViewController: UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: "componentCell", for: indexPath)
         let component = activity.sortedComponents[indexPath.row]
         cell.textLabel?.text = component.name ?? "no name"
-        cell.detailTextLabel?.text = "Est: \(component.estimatedTimeInMinutes), Actual: \(component.averageRecordedDuration?.description ?? "No data yet")"
+        cell.detailTextLabel?.text = "Est: \(component.estimatedTimeInMinutes), Actual: \(component.averageRecordedDurationInMinutes?.description ?? "No data yet")"
         return cell
     }
 }

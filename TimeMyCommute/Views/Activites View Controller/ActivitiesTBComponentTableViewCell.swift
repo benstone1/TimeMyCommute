@@ -15,6 +15,14 @@ class ActivitiesTBComponentTableViewCell: UITableViewCell {
     func configureCell(with component: Component) {
         componentNameLabel.text = component.name
         estimatedTimeLabel.text = "\(component.estimatedTimeInMinutes)"
-        actualTimeLabel.text = component.averageRecordedDuration?.description ?? "No data yet!"
+
+        let timeDescription: String
+        if let seconds = component.averageRecordedDurationInSeconds {
+            let minutes = Int(seconds) / 60
+            timeDescription = "\(minutes)"
+        } else {
+            timeDescription = "n/a"
+        }
+        actualTimeLabel.text = timeDescription
     }
 }

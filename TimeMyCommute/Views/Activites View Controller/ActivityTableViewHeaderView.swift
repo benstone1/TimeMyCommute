@@ -33,12 +33,12 @@ class ActivityTableViewHeaderView: UIView {
     }()
     private lazy var activityEstimatedTimeLabel: UILabel = {
         let lab = UILabel()
-        lab.text = "Estimated Time: \(activity.estimatedTimeInMinutes)"
+        lab.text = "Estimated Time: \(activity.estimatedTimeInMinutes) minutes"
         return lab
     }()
     private lazy var activityActualTimeLabel: UILabel = {
         let lab = UILabel()
-        lab.text = "Actual Time: \(activity.averageRecordedTime?.description ?? "No data yet")"
+        lab.text = "Actual Time: \(activity.averageRecordedTimeInMinutes?.description ?? "n/a") minutes"
         return lab
     }()
     private func commonInit() {

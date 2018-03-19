@@ -15,9 +15,13 @@ enum ComponentValidity {
 }
 
 extension Component {
-    var averageRecordedDuration: TimeInterval? {
+    var averageRecordedDurationInSeconds: TimeInterval? {
         guard let durations = self.recordedDurations?.allObjects as? [Duration], !durations.isEmpty else { return nil }
         return durations.reduce(0){$0 + $1.seconds} / Double(durations.count)
+    }
+    var averageRecordedDurationInMinutes: Int? {
+        guard let av = averageRecordedDurationInSeconds else { return nil }
+        return Int(av) / 60
     }
     var validity: ComponentValidity {
         guard self.name != "" else { return .invalidName }
