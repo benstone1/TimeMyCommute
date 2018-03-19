@@ -10,6 +10,9 @@
 		5436D58320597D4A009FDAA6 /* ActivitiesTBComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5436D58120597D4A009FDAA6 /* ActivitiesTBComponentTableViewCell.swift */; };
 		5436D58420597D4A009FDAA6 /* ActivitiesTBComponentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5436D58220597D4A009FDAA6 /* ActivitiesTBComponentTableViewCell.xib */; };
 		5436D58620598418009FDAA6 /* ActivityTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5436D58520598418009FDAA6 /* ActivityTableViewHeaderView.swift */; };
+		5436D58B2060080D009FDAA6 /* ComponentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5436D58A2060080D009FDAA6 /* ComponentDetailViewController.swift */; };
+		5436D58E20600BA6009FDAA6 /* DurationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5436D58C20600BA6009FDAA6 /* DurationTableViewCell.swift */; };
+		5436D58F20600BA6009FDAA6 /* DurationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5436D58D20600BA6009FDAA6 /* DurationTableViewCell.xib */; };
 		5452CF50202B6AB2007882FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF4F202B6AB2007882FF /* AppDelegate.swift */; };
 		5452CF55202B6AB2007882FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5452CF53202B6AB2007882FF /* Main.storyboard */; };
 		5452CF58202B6AB2007882FF /* TimeMyCommute.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5452CF56202B6AB2007882FF /* TimeMyCommute.xcdatamodeld */; };
@@ -35,6 +38,9 @@
 		5436D58120597D4A009FDAA6 /* ActivitiesTBComponentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTBComponentTableViewCell.swift; sourceTree = "<group>"; };
 		5436D58220597D4A009FDAA6 /* ActivitiesTBComponentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesTBComponentTableViewCell.xib; sourceTree = "<group>"; };
 		5436D58520598418009FDAA6 /* ActivityTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewHeaderView.swift; sourceTree = "<group>"; };
+		5436D58A2060080D009FDAA6 /* ComponentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentDetailViewController.swift; sourceTree = "<group>"; };
+		5436D58C20600BA6009FDAA6 /* DurationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationTableViewCell.swift; sourceTree = "<group>"; };
+		5436D58D20600BA6009FDAA6 /* DurationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DurationTableViewCell.xib; sourceTree = "<group>"; };
 		5452CF4C202B6AB2007882FF /* TimeMyCommute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMyCommute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5452CF4F202B6AB2007882FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5452CF54202B6AB2007882FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +104,15 @@
 			path = "Activites View Controller";
 			sourceTree = "<group>";
 		};
+		5436D59020600BAB009FDAA6 /* Component Detail VC */ = {
+			isa = PBXGroup;
+			children = (
+				5436D58C20600BA6009FDAA6 /* DurationTableViewCell.swift */,
+				5436D58D20600BA6009FDAA6 /* DurationTableViewCell.xib */,
+			);
+			path = "Component Detail VC";
+			sourceTree = "<group>";
+		};
 		5452CF43202B6AB2007882FF = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +149,7 @@
 				5436D58720600327009FDAA6 /* Create Activity */,
 				5436D5882060033A009FDAA6 /* Timer */,
 				5436D58920600349009FDAA6 /* Activites View Controller */,
+				5436D59020600BAB009FDAA6 /* Component Detail VC */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				5452CF7B2030D19F007882FF /* ActivityDetailViewController.swift */,
+				5436D58A2060080D009FDAA6 /* ComponentDetailViewController.swift */,
 				5452CF6C202CAD27007882FF /* CreateActivityViewController.swift */,
 				5452CF66202B9F28007882FF /* TimerViewController.swift */,
 				5452CF762030CB45007882FF /* ActivitiesViewController.swift */,
@@ -241,6 +258,7 @@
 				5452CF5D202B6AB2007882FF /* LaunchScreen.storyboard in Resources */,
 				5452CF5A202B6AB2007882FF /* Assets.xcassets in Resources */,
 				5452CF55202B6AB2007882FF /* Main.storyboard in Resources */,
+				5436D58F20600BA6009FDAA6 /* DurationTableViewCell.xib in Resources */,
 				5436D58420597D4A009FDAA6 /* ActivitiesTBComponentTableViewCell.xib in Resources */,
 				5452CF6B202BB022007882FF /* TimerTableViewCell.xib in Resources */,
 			);
@@ -262,9 +280,11 @@
 				5436D58620598418009FDAA6 /* ActivityTableViewHeaderView.swift in Sources */,
 				5452CF50202B6AB2007882FF /* AppDelegate.swift in Sources */,
 				5452CF6A202BB022007882FF /* TimerTableViewCell.swift in Sources */,
+				5436D58B2060080D009FDAA6 /* ComponentDetailViewController.swift in Sources */,
 				5452CF65202B8DF4007882FF /* CoreDataHelper.swift in Sources */,
 				5452CF8220314752007882FF /* DateHelper.swift in Sources */,
 				5452CF772030CB45007882FF /* ActivitiesViewController.swift in Sources */,
+				5436D58E20600BA6009FDAA6 /* DurationTableViewCell.swift in Sources */,
 				54915205203E051F009C7138 /* CompressedComponentView.swift in Sources */,
 				5452CF58202B6AB2007882FF /* TimeMyCommute.xcdatamodeld in Sources */,
 				5452CF792030D058007882FF /* Activity+Extension.swift in Sources */,

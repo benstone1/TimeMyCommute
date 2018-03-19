@@ -96,6 +96,11 @@ extension ActivitiesViewController: UITableViewDelegate {
         headerView.delegate = self
         return headerView
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedComponent = activities[indexPath.section].activity.sortedComponents[indexPath.row]
+        let componentDetailVC = ComponentDetailViewController(with: selectedComponent)
+        self.navigationController?.pushViewController(componentDetailVC, animated: true)
+    }
 }
 
 extension ActivitiesViewController: ActivityTableHeaderViewDelegate {

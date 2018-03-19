@@ -14,4 +14,7 @@ extension Duration {
         self.seconds = seconds
         self.component = component
     }
+    var minutes: Int {
+        return Int(seconds) / 60
+    }
 }
