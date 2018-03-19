@@ -18,8 +18,15 @@ class ActivityDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
+        setupLabels()
+    }
+    func configureTableView() {
         componentsTableView.dataSource = self
         componentsTableView.delegate = self
+        componentsTableView.reloadData()
+    }
+    func setupLabels() {
         estimatedTimeLabel.text = "Est. time: \(activity.estimatedTimeInMinutes)"
         averageTimeLabel.text = "Avg. time: \(activity.averageRecordedTime?.description ?? "no data yet")"
     }

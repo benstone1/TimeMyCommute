@@ -27,7 +27,7 @@ class CreateActivityViewController: UIViewController {
         configureComponentsTableView()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(saveActivity))
     }
-    
+        
     func configureComponentsTableView() {
         componenetsTableView.dataSource = self
         componenetsTableView.delegate = self
@@ -55,13 +55,13 @@ class CreateActivityViewController: UIViewController {
                 components.append(lastComponent)
             }
         }
-        var activityTimeEstimate: Double = 0
+        var activityTimeEstimate: Int16 = 0
         let newActivity = Activity(context: CoreDataHelper.manager.context)
         newActivity.name = activityName
         for (i, c) in components.enumerated() {
             c.index = Int16(i) //Probably not needed
             c.activity = newActivity
-            activityTimeEstimate += c.estimatedTimeInMinutes
+            activityTimeEstimate += Int16(c.estimatedTimeInMinutes)
         }
         newActivity.estimatedTimeInMinutes = activityTimeEstimate
         CoreDataHelper.manager.save()
@@ -91,6 +91,7 @@ extension CreateActivityViewController: UITableViewDataSource, UITableViewDelega
                 newComponent.index = Int16(indexPath.row)
                 unfinishedLastComponent = newComponent
                 cell.configureCell(with: newComponent, cellType: indexPath.row == inputComponentIndex ? .input : .compressed, isLastRow: true)
+                cell.resetFields()
             }
         }
         return cell
@@ -98,11 +99,22 @@ extension CreateActivityViewController: UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard inputComponentIndex != indexPath.row else { return }
-        inputComponentIndex = indexPath.row
-//        if let unfinishedComponent = getUnfinishedComponent() {
-//            unfinishedLastComponent = unfinishedComponent
-//        }
-        tableView.reloadData()
+        let ip = IndexPath(row: inputComponentIndex, section: 0)
+        guard let cell = tableView.cellForRow(at: ip) as? ComponentTableViewCell else { return }
+        let alertVC = UIAlertController(title: "Invalid Component", message: "", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        switch cell.getCurrentComponent().validity {
+        case .valid:
+            inputComponentIndex = indexPath.row
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        case .invalidName:
+            alertVC.message = "Please enter a valid name"
+            present(alertVC, animated: true, completion: nil)
+        case .invalidDuration:
+            alertVC.message = "Please enter an estimated time"
+            present(alertVC, animated: true, completion: nil)
+        }
     }
     
     func getUnfinishedComponent() -> Component? {
@@ -114,6 +126,14 @@ extension CreateActivityViewController: UITableViewDataSource, UITableViewDelega
         }
         return nil
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == inputComponentIndex {
+            if inputComponentIndex == components.count { return 250 }
+            return 200
+        } else {
+            return 80
+        }
+    }
 }
 
 extension CreateActivityViewController: ComponentTableViewCellDelegate {
@@ -121,5 +141,21 @@ extension CreateActivityViewController: ComponentTableViewCellDelegate {
         components.append(componentToAppend)
         inputComponentIndex += 1
         unfinishedLastComponent = nil
+    }
+    func moveViewsToAccomadateKeyboard(with keyboardRect: CGRect, cell: ComponentTableViewCell, and duration: Double) {
+        let scrollView = componenetsTableView!
+        guard keyboardRect != CGRect.zero else {
+            scrollView.contentInset = UIEdgeInsets.zero
+            scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
+            return
+        }
+        let hiddenAreaRect = keyboardRect.intersection(scrollView.bounds)
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: hiddenAreaRect.height, right: 0.0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+        var textFieldRect = cell.frame
+        textFieldRect = scrollView.convert(textFieldRect, from: cell.superview)
+        textFieldRect = textFieldRect.insetBy(dx: 0.0, dy: -20)
+        scrollView.scrollRectToVisible(textFieldRect, animated: true)
     }
 }

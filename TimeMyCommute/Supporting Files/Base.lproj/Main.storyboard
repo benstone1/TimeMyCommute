@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Activities-->
+        <!--Journeys-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ActivitiesViewController" customModule="TimeMyCommute" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ygV-Vp-Fba">
-                                <rect key="frame" x="0.0" y="56" width="375" height="562"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="activityCell" id="YY0-ys-B06">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YY0-ys-B06" id="pzE-ay-jRG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -35,25 +35,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="sje-wa-Jqk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sje-wa-Jqk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3ym-2f-vcT"/>
-                            <constraint firstItem="sje-wa-Jqk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="63b-F0-kIc"/>
+                            <constraint firstItem="ygV-Vp-Fba" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0V6-qo-wyT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ygV-Vp-Fba" secondAttribute="trailing" id="Ea7-fg-en1"/>
+                            <constraint firstItem="ygV-Vp-Fba" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Esz-Bo-Y27"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ygV-Vp-Fba" secondAttribute="bottom" id="Foe-ET-tnx"/>
-                            <constraint firstItem="ygV-Vp-Fba" firstAttribute="top" secondItem="sje-wa-Jqk" secondAttribute="bottom" id="Sta-su-yWI"/>
-                            <constraint firstItem="ygV-Vp-Fba" firstAttribute="top" secondItem="sje-wa-Jqk" secondAttribute="bottom" id="di1-er-Cbd"/>
-                            <constraint firstItem="sje-wa-Jqk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jeW-HH-sqN"/>
+                            <constraint firstItem="ygV-Vp-Fba" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZvJ-vT-hYq"/>
                             <constraint firstItem="ygV-Vp-Fba" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lqC-iz-lEp"/>
+                            <constraint firstItem="ygV-Vp-Fba" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oc3-7E-qlR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Activities" id="6KS-EC-Kv1">
+                    <navigationItem key="navigationItem" title="Journeys" id="6KS-EC-Kv1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6gd-OD-q3H">
                             <connections>
                                 <segue destination="H2J-9b-0yt" kind="show" id="DMk-MS-FhN"/>
@@ -101,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yV3-BM-pDg" id="zpR-VE-fQY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -147,18 +142,18 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cWW-hD-YP6" id="G3L-95-BV2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zDh-1s-3z7">
-                                                    <rect key="frame" x="15" y="5" width="34" height="20"/>
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HQI-MN-qX6">
-                                                    <rect key="frame" x="15" y="25" width="33" height="15"/>
+                                                    <rect key="frame" x="15" y="25.5" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -209,11 +204,11 @@
             </objects>
             <point key="canvasLocation" x="2086" y="-115"/>
         </scene>
-        <!--Times-->
+        <!--Journeys-->
         <scene sceneID="MTn-gV-b9a">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n2D-dR-aEL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Times" id="ri7-vc-stk"/>
+                    <tabBarItem key="tabBarItem" title="Journeys" image="icons8-adventure-40" id="ri7-vc-stk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QF4-VC-O6k">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -286,7 +281,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tp0-my-wND"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Timer" id="qdA-55-E92"/>
+                    <tabBarItem key="tabBarItem" title="Timer" image="stopwatchIcon" id="qdA-55-E92"/>
                     <connections>
                         <outlet property="activityPickerView" destination="0gC-xw-pHD" id="Kfk-OL-fxT"/>
                         <outlet property="componentsTableView" destination="YDg-Bp-FjS" id="1MY-2R-9lT"/>
@@ -298,4 +293,8 @@
             <point key="canvasLocation" x="302" y="1074"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-adventure-40" width="40" height="40"/>
+        <image name="stopwatchIcon" width="29" height="30"/>
+    </resources>
 </document>

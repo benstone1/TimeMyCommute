@@ -11,6 +11,7 @@ import UIKit
 class CompressedComponentView: UIView {
     public func configureView(with component: Component) {
         titleLabel.text = component.name ?? "Unnamed"
+        //print("about to set time to \(Int(component.estimatedTimeInMinutes))")
         estimatedTimeLabel.text = "\(Int(component.estimatedTimeInMinutes)) minutes"
     }
     

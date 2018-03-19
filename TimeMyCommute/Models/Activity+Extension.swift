@@ -20,4 +20,16 @@ extension Activity {
         }
         return finalTime
     }
+    func toCellFormattedString() -> String {
+        var str = "\(self.name ?? "No name")\n"
+        for component in self.sortedComponents {
+            str +=
+            """
+            \(component.name ?? "no name")
+                Estimated time: \(component.estimatedTimeInMinutes)
+                Actual time: \(component.averageRecordedDuration?.description ?? "No data yet!")
+            """
+        }
+        return str
+    }
 }

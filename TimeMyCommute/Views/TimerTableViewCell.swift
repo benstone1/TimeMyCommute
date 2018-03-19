@@ -24,14 +24,30 @@ class TimerTableViewCell: UITableViewCell {
     public var isEnabled = false {
         didSet {
             completedButton.isEnabled = isEnabled
-            completedButton.setTitleColor(isEnabled ? .green : .blue, for: .normal)
+            //completedButton.setTitleColor(.blue, for: .normal)
+            completedButton.isHidden = !isEnabled
+            completedButton.setTitleColor(isEnabled ? .blue : .green, for: .normal)
         }
     }
     
+    
     public func startTimer() {
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(handleBackgroundMove), name: Notification.Name.UIApplicationWillResignActive, object: nil)
+        nc.addObserver(self, selector: #selector(handleForegroundMove), name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true){(timer) in
             self.timeElapsed += 1
         }
+    }
+    
+    private var backgroundEntranceTime = Date()
+    
+    @objc private func handleBackgroundMove() {
+        backgroundEntranceTime = Date()
+    }
+    
+    @objc private func handleForegroundMove() {
+        timeElapsed += Date().timeIntervalSince(backgroundEntranceTime)
     }
     
     public func stopTimer() {
@@ -61,6 +77,7 @@ class TimerTableViewCell: UITableViewCell {
     @IBAction private func completedButtonPressed(_ sender: Any) {
         stopTimer()
         isEnabled = false
+        completedButton.isHidden = false
         delegate?.startNextTimer(completedComponentIndex: Int(component.index), completedComponentTime: Double(timeElapsed))
     }
 }

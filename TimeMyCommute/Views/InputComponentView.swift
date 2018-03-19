@@ -25,13 +25,18 @@ class InputComponentView: UIView, UITextFieldDelegate {
         }
     }
     
+    public func resetFields() {
+        name = ""
+        estimatedTime = 0
+    }
+    
     private var component: Component!
     
     private var estimatedTime: Double = 0 {
         didSet {
             timeSlider.value = Float(estimatedTime)
             timeTextField.text = "\(Int(estimatedTime)) minutes"
-            component.estimatedTimeInMinutes = estimatedTime
+            component.estimatedTimeInMinutes = Int16(estimatedTime)
         }
     }
     
@@ -51,6 +56,7 @@ class InputComponentView: UIView, UITextFieldDelegate {
     lazy private var componentNameTextField: UITextField = {
        var tf = UITextField()
         tf.placeholder = "name"
+        tf.delegate = self
         tf.delegate = self
         return tf
     }() 
@@ -78,6 +84,11 @@ class InputComponentView: UIView, UITextFieldDelegate {
         timeTF.placeholder = "0 minutes"
         return timeTF
     }()
+    
+    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     internal func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let text = textField.text, let textRange = Range(range, in: text) {

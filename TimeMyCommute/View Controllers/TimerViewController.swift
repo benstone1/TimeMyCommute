@@ -13,7 +13,15 @@ class TimerViewController: UIViewController {
     var activities = [Activity]() {
         didSet {
             activityPickerView.reloadComponent(0)
-            selectedActivity = activities[0]
+            if activities.isEmpty {
+                handleEmptyActivities()
+            } else {
+                selectedActivity = activities[0]
+            }
+            startPlayPauseButton.isHidden = activities.isEmpty
+            activityPickerView.isHidden = activities.isEmpty
+            componentsTableView.isHidden = activities.isEmpty
+            emptyStateLabel.isHidden = !activities.isEmpty
         }
     }
     
@@ -35,6 +43,13 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var activityPickerView: UIPickerView!
     @IBOutlet weak var componentsTableView: UITableView!
     
+    lazy var emptyStateLabel: UILabel = {
+        let lab = UILabel()
+        lab.font = UIFont.systemFont(ofSize: 20)
+        lab.text = "Add a journey and start timing!"
+        return lab
+    }()
+    
     var activeComponentIndex = 0
     
     override func viewDidLoad() {
@@ -46,8 +61,20 @@ class TimerViewController: UIViewController {
         loadActivities()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadActivities()
+    }
+    
     func loadActivities() {
         activities = CoreDataHelper.manager.allActivities
+    }
+    
+    func handleEmptyActivities() {
+        view.addSubview(emptyStateLabel)
+        emptyStateLabel.translatesAutoresizingMaskIntoConstraints = false
+        emptyStateLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        emptyStateLabel.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
     }
     
     @IBAction func playPauseButtonPressed(_ sender: UIButton) {
@@ -149,6 +176,7 @@ extension TimerViewController: UIPickerViewDelegate {
         return activities[row].name!
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedActivity = activities[row]
         components = activities[row].sortedComponents
     }
 }

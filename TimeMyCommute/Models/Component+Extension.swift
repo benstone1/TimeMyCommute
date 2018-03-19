@@ -22,6 +22,7 @@ extension Component {
     var validity: ComponentValidity {
         guard self.name != "" else { return .invalidName }
         guard self.estimatedTimeInMinutes != 0 else { return .invalidDuration }
+        print(estimatedTimeInMinutes, "It is \(estimatedTimeInMinutes != 0) that the estimatedTimeInMinutes is not 0")
         return .valid
     }
 }
